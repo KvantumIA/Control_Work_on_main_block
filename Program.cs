@@ -17,13 +17,32 @@ void PrintArray(string[] array)
     System.Console.WriteLine();
 }
 
-
+void SearchArray(string[] array, string[] array2)
+{
+    int count2 = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        int count = 0;
+        string temp = array[i];
+        count = temp.Length;
+        if (count <= 3) 
+        {
+            array2[count2] = temp;
+            count2++;
+        }
+        else continue;
+    }
+    System.Console.WriteLine();
+}
 
 
 
 
 Console.Clear();
-// System.Console.Write("Введите количество строк: ");
-// int rows = Convert.ToInt32(Console.ReadLine());
-string[] array = new string[] {"Hello", "2", "world", ":-)"};
+string[] array = new string[] {"Russia", "Denmark", "Kazan", "Hello", "2", "world", ":-)"};
+string[] array2 = new string[array.Length];
+System.Console.Write("Первичный массив: ");
 PrintArray(array);
+SearchArray(array, array2);
+System.Console.Write("Новый массив из строк, длина которых меньше или равна 3: ");
+PrintArray(array2);
