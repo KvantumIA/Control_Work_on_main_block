@@ -19,16 +19,16 @@ void PrintArray(string[] array)
 
 void SearchArray(string[] array, string[] array2)
 {
-    int count2 = 0;
+    int count = 0;
     for (int i = 0; i < array.Length; i++)
     {
-        int count = 0;
+        int num = 0;
         string temp = array[i];
-        count = temp.Length;
-        if (count <= 3) 
+        num = temp.Length;
+        if (num <= 3) 
         {
-            array2[count2] = temp;
-            count2++;
+            array2[count] = temp;
+            count++;
         }
         else continue;
     }
